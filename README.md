@@ -7,14 +7,15 @@ My revision to vim plugin cscope_maps.vim
 
 ## Vundle
 
-1. Add `Bundle diabloneo/cscope_maps.vim` to .vimrc
+1. Add `Bundle davy79/cscope_maps.vim` to .vimrc
 2. Run `:BundleInstall`
 
 # Features
 
 ## Auto update cscope database
 
-Auto update cscope database after saving a buffer.
+- Auto load cscope database (recursive) on startup.
+- Auto update cscope database after saving a buffer.
 
 ## More key mappings
 
