@@ -16,6 +16,7 @@ My revision to vim plugin cscope_maps.vim
 
 - Auto load cscope database (recursive) on startup.
 - Auto update cscope database after saving a buffer.
+  - added support for makefile cscope target for project specific file collection
 
 ## More key mappings
 
