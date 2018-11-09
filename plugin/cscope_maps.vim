@@ -181,16 +181,18 @@ if has("cscope")
 function! s:ReloadCscopeDB()
     let db = findfile("cscope.out", ".;")
     if (!empty(db))
+        " echo 'db = ' . db
         let path = strpart(db, 0, match(db, "/cscope.out$"))
         if (empty(path))
             let path = getcwd()
         endif
 
+        " echo 'path = ' . path
         if filereadable(path . "/cscope.files")
             call system('cd ' . path . ' && cscope -b -k')
         elseif (!empty($PRODUCT))
             " cscope is build for a specific product, export PRODUCT=12345
-            call system('cd ' . path . '&& make cscope PRODUCT=' . $PRODUCT)
+            call system('cd ' . path . ' && make cscope PRODUCT=' . $PRODUCT)
         elseif filereadable(path . "/cscope.po.out")
             call system('cd ' . path . ' && cscope -b -q')
         else
