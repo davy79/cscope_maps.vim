@@ -1,7 +1,7 @@
 cscope_maps.vim
 ===============
 
-My revision to vim plugin cscope_maps.vim
+My revision to vim plugin cscope_maps.vim with some personal tweaks
 
 # Installation
 
